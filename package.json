@@ -1,0 +1,39 @@
+{
+    "name": "eglador-validation",
+    "description": "eglador validation",
+    "author": "Eglador",
+    "main": "dist/js/app.js",
+    "license": "MIT",
+    "version": "1.0.2-alpha",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/kenangundogan/validation.git"
+    },
+    "bugs": {
+        "url": "https://github.com/kenangundogan/validation/issues"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "webpack serve --mode=development",
+        "build": "webpack",
+        "extension": "webpack --config ./webpack.extension.config.js"
+    },
+    "keywords": [
+        "validation"
+    ],
+    "devDependencies": {
+        "@tailwindcss/forms": "^0.5.3",
+        "autoprefixer": "^10.4.13",
+        "css-loader": "^6.7.1",
+        "html-webpack-plugin": "^5.5.0",
+        "postcss": "^8.4.18",
+        "postcss-loader": "^7.0.1",
+        "postcss-preset-env": "^7.8.2",
+        "style-loader": "^3.3.1",
+        "tailwindcss": "^3.2.2",
+        "webpack": "^5.74.0",
+        "webpack-cli": "^4.10.0",
+        "webpack-dev-server": "^4.11.1",
+        "copy-webpack-plugin": "^6.4.1"
+    }
+}
