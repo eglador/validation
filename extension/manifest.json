@@ -1,0 +1,21 @@
+{
+    "name": "Eglador Validation",
+    "description": "This validator checks the validity of Web documents in HTML.",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "permissions": [
+        "storage",
+        "scripting",
+        "activeTab"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {},
+    "icons": {
+        "16": "/icons/16x.png",
+        "32": "/icons/32x.png",
+        "48": "/icons/48x.png",
+        "128": "/icons/128x.png"
+    }
+}
