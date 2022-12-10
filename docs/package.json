@@ -1,0 +1,15 @@
+{
+  "name": "eglador-validation",
+  "version": "1.0.0",
+  "description": "design and development studio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tailwind-build": "npx tailwindcss -i ./style/app.css -o ./style/app.min.css build",
+    "tailwind-watch": "npx tailwindcss -i ./style/app.css -o ./style/app.min.css --watch"
+  },
+  "author": "Eglador",
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
+  }
+}
