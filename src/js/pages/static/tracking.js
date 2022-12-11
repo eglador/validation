@@ -30,7 +30,7 @@ class main {
             trackingData = {
                 "hotjar": {
                     "name": "hotjar",
-                    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi illum fuga, voluptate atque ducimus suscipit?",
+                    "description": "Everything you ever wanted to know about your website...",
                     "element": "src",
                     "source": {
                         "name": "Source",
@@ -88,8 +88,8 @@ class main {
             result = '',
             trackingData = {
                 "google": {
-                    "name": "Google",
-                    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi illum fuga, voluptate atque ducimus suscipit?",
+                    "name": "Google Analytics and GTM",
+                    "description": "Google Analytics is a platform that collects data from your websites and apps to create reports that provide insights into your business.",
                     "element": "src",
                     "source": {
                         "name": "Source",
