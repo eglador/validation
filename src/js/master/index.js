@@ -4,6 +4,7 @@ import { Div } from '../helpers/htmlElement';
 import header from './header';
 import footer from './footer';
 import navigation from './navigation';
+import privacyPolicy from './privacyPolicy';
 
 class egladorValidation {
     constructor() {
@@ -37,6 +38,14 @@ class egladorValidation {
         return html;
     }
 
+    privacyPolicy() {
+        let html = Div('', 'data-type', 'privacyPolicy');
+        let content = Div('eglador-w-full eglador-max-w-md eglador-overflow-hidden eglador-p-4 eglador-z-50 eglador-absolute eglador-bottom-36 eglador-right-0 eglador-border-t eglador-border-b eglador-border-dashed eglador-border-slate-300 eglador-bg-yellow-50 eglador-shadow-top');
+        content.appendChild(privacyPolicy.render(this.data));
+        html.appendChild(content);
+        return html;
+    }
+
     footer() {
         let html = Div('', 'data-type', 'footer');
         let content = Div('eglador-w-full eglador-max-w-md eglador-overflow-hidden eglador-p-4 eglador-h-16 eglador-z-40 eglador-sticky eglador-bottom-0 eglador-right-0 eglador-bg-white');
@@ -51,6 +60,7 @@ class egladorValidation {
         
         master.appendChild(this.header());
         master.appendChild(this.body());
+        master.appendChild(this.privacyPolicy());
         master.appendChild(this.navigation());
         master.appendChild(this.footer());
 

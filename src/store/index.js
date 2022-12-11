@@ -25,6 +25,12 @@ const appData = {
         "status": true,
         "copyright": "Copyright © 2022 - Validation <br> Designed and built by <b>Eglador</b>"
     },
+    "privacyPolicy":{
+        "type": "privacyPolicy",
+        "status": true,
+        "title": "Privacy Policy",
+        "description": "Eglador Validation reads the source code of websites you visit, we do not collect any information that identifies you personally. Read more on our <a href='https://eglador.github.io/validation/privacy-policy' target='_blank' title='Eglador Validation Privacy Policy' class='eglador-font-bold eglador-underline' >privacy policy.</a>"
+    },
     "navigation": {
         "type": "navigation",
         "status": true,
@@ -205,7 +211,7 @@ const appData = {
                 "type": "head",
                 "status": true,
                 "title": "Tracking",
-                "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                "description": "is a unique identifier that allows  to collect data when inserted into a website. This data includes the time users spend on a webpage, search terms used, and how they came to the site.",
                 "refresh": {
                     "type": "refresh",
                     "status": true,
