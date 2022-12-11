@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="This validator checks the validity of Web documents in HTML. If you wish to validate specific content such as Meta info, CSS stylesheets, Scripts, Heading, find broken links or to etc, available here.">
+    <meta name="description" content="This validator checks the validity of Web documents in HTML. If you wish to validate specific content such as Meta info, CSS stylesheets, Scripts, Heading, find broken links or to etc, available here.">
     <meta name="keywords" content="validation, html, style, script">
 
     <meta name="theme-color" content="#ffffff">
@@ -15,8 +14,7 @@
     <meta property="og:url" content="https://eglador.github.io/validation/">
     <meta property="og:site_name" content="Eglador Validation">
     <meta property="og:title" content="Eglador Validation">
-    <meta property="og:description"
-        content="This validator checks the validity of Web documents in HTML. If you wish to validate specific content such as Meta info, CSS stylesheets, Scripts, Heading, find broken links or to etc, available here.">
+    <meta property="og:description" content="This validator checks the validity of Web documents in HTML. If you wish to validate specific content such as Meta info, CSS stylesheets, Scripts, Heading, find broken links or to etc, available here.">
     <meta property="og:image" content="images/share/1200x620.jpg">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
@@ -46,29 +44,36 @@
 </head>
 
 <body class="h-screen">
-    <main class="w-full h-full border-[2rem] border-b-[4rem] sm:border-[4rem] border-solid border-white
-        before:content-['*']
-        before:relative before:block
-        before:w-full before:h-full
+
+    <main class="relative w-full h-full p-8 sm:p-16
+        after:content-[''] after:fixed after:top-0 after:left-0 after:w-full after:h-full after:block after:border-[2rem] after:border-b-[4rem] after:sm:border-[4rem] after:border-solid after:border-white
+        before:content-[''] before:fixed before:top-0 before:left-0 before:block before:w-full before:h-full
         before:bg-no-repeat before:bg-cover before:bg-center before:opacity-10
         before:bg-[url('../images/pattern/pattern.svg')]">
-        <div
-            class="absolute top-16 left-16 z-50 w-[calc(100%-8rem)] h-[calc(100%-8rem)] flex justify-center items-center">
-            <div class="w-80 h-auto relative">
+
+        <div class="absolute z-10 top-0 left-0 right-0 m-auto w-full h-full p-8 sm:p-16 flex flex-col justify-center items-center">
+            <div class="max-w-sm h-auto relative mb-5">
                 <img src="images/logo/logo.svg" class="w-full" alt="Eglador Validation">
             </div>
-        </div>
-        <div class="w-full relative left-0 right-0 inline-flex justify-center flex-wrap text-xs space-x-5">
-            <div class="text-center py-4">
-                <div class="inline-flex flex-wrap justify-center">
-                    <p class="mr-1">Copyright © 2023, Designed and built by </p>
-                    <a href="https://github.com/eglador/validation" title="Eglador Validation" target="_blank"
-                        rel="noopener nofollow"><b>Eglador Validation</b></a>
-                </div>
-                <p>Code licensed MIT, docs CC BY 3.0.</p>
+            <div class="max-w-lg text-center">
+                This validator checks the validity of Web documents in HTML. If you wish to validate specific content such as Meta info, CSS stylesheets, Scripts, Heading, find broken links or to etc, available here.
             </div>
         </div>
+
     </main>
+
+    <footer class="fixed z-20 right-0 bottom-0 left-0 w-full bg-white">
+        <div class="flex flex-wrap flex-col items-center p-4 text-center text-xs">
+            <div>
+                <p class="inline">Copyright © 2023, Designed and built by </p>
+                <a class="inline" href="https://github.com/eglador/validation" title="Eglador Validation"
+                    target="_blank" rel="noopener nofollow"><b>Eglador Validation</b></a>
+            </div>
+            <p class="inline">Code licensed MIT, docs CC BY 3.0.</p>
+            <a class="inline font-bold underline" href="/docs/privacy-policy.html" target="_blank" title="Eglador Validation Privacy Policy">Privacy Policy</a>
+        </div>
+    </footer>
+
 </body>
 
 </html>
