@@ -440,6 +440,13 @@ video {
   font-weight: 700;
 }
 
+.text h4 {
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+}
+
 .text p {
   margin-bottom: 1.25rem;
 }
