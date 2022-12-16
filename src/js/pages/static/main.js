@@ -42,8 +42,7 @@ class main {
                 <div class="${this.listDescriptionClass}">Summary of information on various properties.</div>
             </div>
             ${this.cover()}
-            ${this.seo()}
-            ${this.htags()}
+            ${this.baseTags()}
         </div>
         `
     }
@@ -65,48 +64,25 @@ class main {
                 `
     }
 
-    seo() {
-        const title = document.querySelector("title"),
-            description = document.querySelector('[name="description"]'),
-            keyowrds = document.querySelector('[name="keywords"]'),
-            url = window.location.href;
-        let result = '';
-        result += ``;
+    baseTags() {
+        const datas = [
+            { 'name': 'Title', 'selector': 'title', 'value': '' },
+            { 'name': 'Description', 'selector': '[name="description"]', 'value': 'content' },
+            { 'name': 'Keywords', 'selector': '[name="keywords"]', 'value': 'content' },
+            { 'name': 'H1', 'selector': 'h1', 'value': '' }
+        ];
 
-        result += `<li class="${this.itemClassPrimary}">
-                <div class="${this.itemHeadClass}">Title</div>
-                <div class="${this.itemDescriptionClass}">`;
-        if (title) { result += `${title.textContent}`; }
-        result += `</div></li>`;
-
-        result += `<li class="${this.itemClassPrimary}">
-                <div class="${this.itemHeadClass}">Description</div>
-                <div class="${this.itemDescriptionClass}">`;
-        if (description) { result += `${description.getAttribute("content")}`; }
-        result += `</div></li>`;
-
-        result += `<li class="${this.itemClassPrimary}">
-                <div class="${this.itemHeadClass}">Keywords</div>
-                <div class="${this.itemDescriptionClass}">`;
-        if (keyowrds) { result += `${keyowrds.getAttribute("content")}`; }
-        result += `</div></li>`;
-
-        result += `<li>
-            <div class="${this.itemHeadClass}">Url</div>
-            <div class="${this.itemDescriptionClass}">${url || ''}</div>
-        </li> `;
-
-        return `<ul class="${this.listClass}">${result}</ul>`;
-    }
-
-    htags() {
-        const headingList = document.querySelectorAll('h1, h2');
         var result = "";
-        headingList.forEach((element, key) => {
-            result += `<li class="${this.itemClassPrimary} ${headingList.length == (key + 1) ? 'eglador-border-none eglador-pb-0' : ''}">
-                <div class="${this.itemHeadClass}">${element.tagName}</div>
-                <div class="${this.itemDescriptionClass}">${element ? element.innerHTML : ''}</div>
-            </li>`;
+        datas.forEach((data, dkey) => {
+            const headingList = document.querySelectorAll(data.selector);
+            headingList.forEach((element, eKey) => {
+                result += `<li class="${this.itemClassPrimary}">
+                    <div class="${this.itemHeadClass}">${data.name}</div>
+                    <div class="${this.itemDescriptionClass}">
+                        ${data.value == "" ? element.innerHTML : element.content}
+                    </div>
+                </li>`;
+            });
         });
         return `
             <ul class="${this.listClass}">

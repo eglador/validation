@@ -289,43 +289,6 @@ const appData = {
                         ]
                     },
                     {
-                        "type": "title",
-                        "name": "Title",
-                        "description": "The &lt;title&gt; tag defines the title of the document. The title must be text-only, and it is shown in the browser's title bar or in the page's tab. The &lt;title&gt; tag is required in HTML documents! You can NOT have more than one &lt;title&gt; element in an HTML document.",
-                        "status": 1,
-                        "items": [
-                            {
-                                "id": 123456789,
-                                "name": "Title",
-                                "type": "title",
-                                "element": "title",
-                                "rules": {
-                                    "use": {
-                                        "min": {
-                                            "value": 1,
-                                            "description": "min 1"
-                                        },
-                                        "max": {
-                                            "value": 1,
-                                            "description": "max 1"
-                                        },
-                                        "description": "element required."
-                                    }
-                                },
-                                "attributes": {
-                                    "status": false,
-                                    "items": []
-                                },
-                                "propertyName": "Example: ",
-                                "property": "<title></title>",
-                                "reportName": "Report: ",
-                                "report": "",
-                                "description": "The &lt;title&gt; tag defines the title of the document. The title must be text-only, and it is shown in the browser's title bar or in the page's tab. The &lt;title&gt; tag is required in HTML documents! You can NOT have more than one &lt;title&gt; element in an HTML document.",
-                                "more": "more"
-                            },
-                        ]
-                    },
-                    {
                         "type": "meta",
                         "name": "Meta",
                         "description": "&lt;meta&gt; tags always go inside the &lt;head&gt; element, and are typically used to specify character set, page description, keywords, author of the document, and viewport settings.",
