@@ -25,7 +25,7 @@ const appData = {
         "status": true,
         "copyright": "Copyright © 2022 - Validation <br> Designed and built by <b>Eglador</b>"
     },
-    "privacyPolicy":{
+    "privacyPolicy": {
         "type": "privacyPolicy",
         "status": true,
         "title": "Privacy Policy",
@@ -200,7 +200,50 @@ const appData = {
             },
             "content": {
                 "type": "content",
-                "status": true
+                "status": true,
+                "featured": {
+                    "type": "featured",
+                    "name": "Featured",
+                    "description": "Summary of information on various properties.",
+                    "status": "",
+                    "items": [
+                        {
+                            "id": 123456789,
+                            "name": "og:image",
+                            "selector": "[property='og:image']",
+                            "value": "content",
+                            "htmlTag": "img"
+                        },
+                        {
+                            "id": 123456789,
+                            "name": "Title",
+                            "selector": "title",
+                            "value": "",
+                            "htmlTag": ""
+                        },
+                        {
+                            "id": 123456789,
+                            "name": "Description",
+                            "selector": "[name='description']",
+                            "value": "content",
+                            "htmlTag": ""
+                        },
+                        {
+                            "id": 123456789,
+                            "name": "Keywords",
+                            "selector": "[name='keywords']",
+                            "value": "content",
+                            "htmlTag": ""
+                        },
+                        {
+                            "id": 123456789,
+                            "name": "H1",
+                            "selector": "h1",
+                            "value": "",
+                            "htmlTag": ""
+                        }
+                    ]
+                }
             }
         },
         "tracking": {

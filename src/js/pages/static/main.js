@@ -34,61 +34,42 @@ class main {
         return section;
     }
 
+
     async featured() {
+        var lastChild = "eglador-border-none eglador-mb-0";
+        var result = "";
+
+        this.data.content.featured.items.forEach((data, dkey) => {
+            const headingList = document.querySelectorAll(data.selector);
+            headingList.forEach((element, eKey) => {
+                if (this.data.content.featured.items.length == (dkey + 1)) {
+                    lastChild = headingList.length == (eKey + 1) ? 'eglador-border-none eglador-mb-0 eglador-pb-0' : '';
+                }
+                else { lastChild = "" }
+                result += `<li class="${this.itemClassPrimary} ${lastChild}">
+                            <div class="${this.itemHeadClass}">${data.name}</div>
+                            <div class="${this.itemDescriptionClass}">`;
+                if (data.htmlTag == "img") {
+                    result += `<img src="${element.content}"/>`;
+                }
+                else {
+                    result += (data.value == "" ? element.innerHTML : element.content);
+                }
+                result += `</div></li>`;
+            });
+        });
+
         document.querySelector('[data-wrapper="featured"]').innerHTML = `
         <div class="eglador-mb-5">
             <div class="eglador-mb-5">
-                <div class="${this.listHeadClass}">Featured</div>
-                <div class="${this.listDescriptionClass}">Summary of information on various properties.</div>
+                <div class="${this.listHeadClass}">${this.data.content.featured.name}</div>
+                <div class="${this.listDescriptionClass}">${this.data.content.featured.description}</div>
             </div>
-            ${this.cover()}
-            ${this.baseTags()}
-        </div>
-        `
-    }
-
-    cover() {
-        const ogImage = document.querySelector('[property="og:image"]');
-        const twitterImage = document.querySelector('[name="twitter:image"]');
-        const cover = ogImage ? ogImage : twitterImage;
-        const image = cover ? cover.getAttribute("content") : '';
-        return `
-                <ul class="${this.listClass}">
-                    <li>
-                        <div class="${this.itemHeadClass}">Cover</div>
-                        <div class="eglador-relative eglador-flex eglador-items-center eglador-justify-center eglador-text-xs eglador-bg-gray-50 eglador-aspect-video ${image ? '' : 'eglador-p-5 eglador-bg-yellow-50'}">
-                            ${image ? `<img src="${image}" alt="cover" class="eglador-absolute eglador-top-0 eglador-bottom-0 eglador-left-0 eglador-m-auto eglador-max-w-full eglador-max-h-full"/>` : this.options.header.logo.src}
-                        </div>
-                    </li>
-                </ul>
-                `
-    }
-
-    baseTags() {
-        const datas = [
-            { 'name': 'Title', 'selector': 'title', 'value': '' },
-            { 'name': 'Description', 'selector': '[name="description"]', 'value': 'content' },
-            { 'name': 'Keywords', 'selector': '[name="keywords"]', 'value': 'content' },
-            { 'name': 'H1', 'selector': 'h1', 'value': '' }
-        ];
-
-        var result = "";
-        datas.forEach((data, dkey) => {
-            const headingList = document.querySelectorAll(data.selector);
-            headingList.forEach((element, eKey) => {
-                result += `<li class="${this.itemClassPrimary}">
-                    <div class="${this.itemHeadClass}">${data.name}</div>
-                    <div class="${this.itemDescriptionClass}">
-                        ${data.value == "" ? element.innerHTML : element.content}
-                    </div>
-                </li>`;
-            });
-        });
-        return `
             <ul class="${this.listClass}">
             ${result}
             </ul>
-        `
+        </div>
+        `;
     }
 
     async pageInfo() {
